@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Run code snippets online!</title>
+    </head>
+    <body>
+        <% if(typeof user == 'undefined'){  %><%- include('../includes/nav.ejs'); %><% } else { %><%- include('../includes/nav.ejs', {user:user}); %><% } %>
+        
+        <content>
+            <div>
+                <div class="titles" id="lang"><strong>{Languages}</strong></div>
+                
+                <!-- search bar -->
+                <form id="searchBox" action="#" onsubmit="return false;">
+                    <input id="search" size="47" type="text" placeholder="Type language name here" style="border-radius:5px; border:1px solid black; font-size:15pt;" />
+                    <button class="buttons" id="submit" onclick="searchBar()">Go</button>
+                </form>
+             
+                <!-- language selector -->
+                <div id="languages">
+                    <h3>Popular</h3>
+                    <div id="popular">
+                        <ul>
+                            <li><a href="/languages/HTML"><span class="title"><strong>HTML:</strong> is used to create electronic documents (called pages) that are displayed on the World Wide Web.</li></span></a>
+                            <li><a href="/languages/CSS"><span class="title"><strong>CSS:</strong>  is a Web page derived from multiple sources with a defined order of precedence where the definitions of any style element conflict.</li></span></a>
+                            <li><a href="/languages/JavaScript"><span class="title"><strong>JavaScript:</strong>  JavaScript is an interpreted programming or script language from Netscape.</li></span></a>
+                            <li><a href="/languages/python3"><span class="title"><strong>Python3:</strong> A dynamic language emphasizing readability.</li></span></a>
+                            <li><a href="/languages/ruby"><span class="title"><strong>Ruby:</strong> A natural dynamic object-oriented language.</li></span></a>
+                            <li><a href="/languages/htmlcssjs"><span class="title"><strong>HTML, CSS, JS:</strong> The languages that make up the web.</li></span></a>
+                            <li><a href="/languages/scheme"><span class="title"><strong>Scheme:</strong> An elegant dynamic dialect of Lisp.</li></span></a>
+                            <li><a href="/languages/csharp"><span class="title"><strong>C#:</strong> A Microsoft .NET programming language.</li></span></a>
+                            <li><a href="/languages/java"><span class="title"><strong>Java:</strong> A concurrent, class-based, statically typed object-oriented language.</li></span></a>
+                        </ul>    
+                    </div>
+                    <h3>Practical</h3>
+                    <div id="practical">
+                        <ul>
+                            <li><a href="/languages/C"><span class="title"><strong>C:</strong> Low-Level and cross-platform imperative language.</li></span></a>
+                            <li><a href="/languages/C++"><span class="title"><strong>C++:</strong>A general purpose system programming language.</li></span></a>
+                            <li><a href="/languages/C++11"><span class="title"><strong>C++11:</strong> A general purpose system programming language.</li></span></a>
+                            <li><a href="/languages/csharp"><span class="title"><strong>C#:</strong> A Microsoft .NET programming language.</li></span></a>
+                            <li><a href="/languages/fsharp"><span class="title"><strong>F#:</strong> A Microsoft .NET functional programming language.</li></span></a>
+                            <li><a href="/languages/go"><span class="title"><strong>Go:</strong> Statically typed yet expressive language with a focus on concurrency.</li></span></a>
+                            <li><a href="/languages/java"><span class="title"><strong>Java:</strong> A concurrent, class-based, statically typed object-oriented language.</li></span></a>
+                            <li><a href="/languages/lua"><span class="title"><strong>Lua:</strong> A lightweight multi-paradigm scripting language.</li></span></a>
+                            <li><a href="/languages/nodejs"><span class="title"><strong>Nodejs:</strong> Evented I/O for V8 javascript.</li></span></a>
+                            <li><a href="/languages/php"><span class="title"><strong>PHP:</strong> A popular general-purpose scripting language.</li></span></a>
+                            <li><a href="/languages/python"><span class="title"><strong>Python:</strong> A dynamic language emphasizing readability.</li></span></a>
+                            <li><a href="/languages/python3"><span class="title"><strong>Python3:</strong> A dynamic language emphasizing readability.</li></span></a>
+                            <li><a href="/languages/pyuthonwithturtle"><span class="title"><strong>Python(with turtle):</strong> A dynamic language emphasizing readability.</li></span></a>
+                            <li><a href="/languages/ruby"><span class="title"><strong>Ruby:</strong> A natural dynamic object-oriented language.</li></span></a>
+                            <li><a href="/languages/rust"><span class="title"><strong>Rust:</strong> A fast and safe systems programming language.</li></span></a>
+                            <li><a href="/languages/scheme"><span class="title"><strong>Scheme:</strong> An elegant dynamic dialect of Lisp.</li></span></a>
+                            <li><a href="/languages/swift"><span class="title"><strong>Swift:</strong> A modern general-purpose programming language from apple.</li></span></a>
+                        </ul>
+                    </div>
+                    <h3>Web</h3>
+                    <div id="web">
+                        <ul>
+                            <li><a href="/languages/essix"><span class="title"><strong>ES6:</strong> Next Generation JavaScript.</li></span></a>
+                            <li><a href="/languages/coffeescript"><span class="title"><strong>coffeescript:</strong>  Unfancy JavaScript.</li></span></a>
+                            <li><a href="/languages/javascript"><span class="title"><strong>javascript:</strong> JavaScript is an interpreted programming or script language from Netscape.</li></span></a>
+                            <li><a href="/languages/roy"><span class="title"><strong>roy:</strong> Small functional languagle that compiles the JavaScript.</li></span></a>
+                            <li><a href="/languages/htmlcssjs"><span class="title"><strong>HTML, CSS, JS:</strong> The languages that make up the web.</li></span></a>
+                        </ul>
+                    </div>
+                    <h3>Classic</h3>
+                    <div id="classic">
+                        <ul>
+                            <li><a href="/languages/apl"><span class="title"><strong>APL:</strong> An array-oriented language using funny characters.</li></span></a>
+                            <li><a href="/languages/forth"><span class="title"><strong>Forth:</strong> An interactive stack-oriented language.</li></span></a>
+                            <li><a href="/languages/qbasic"><span class="title"><strong>QBasic:</strong> Structured programming for beginners.</li></span></a>
+                        </ul>
+                    </div>
+                    <h3>Esoteric</h3>
+                    <div id="esoteric">
+                        <ul>
+                            <li><a href="/languages/bloop"><span class="title"><strong>Bloop:</strong> Nothing but bounded loops.</li></span></a>
+                            <li><a href="/languages/brainf"><span class="title"><strong>BrainF:</strong> A pure Turing machine controller.</li></span></a>
+                            <li><a href="/languages/emoticon"><span class="title"><strong>Emoticon:</strong> Programming with a extra dose of smile.</li></span></a>
+                            <li><a href="/languages/lolcode"><span class="title"><strong>LOLCODE:</strong> The basic language of lolcats.</li></span></a>
+                            <li><a href="/languages/unlambda"><span class="title"><strong>Unlambda:</strong> Functional purity given form.</li></span></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </content>
+        <%- include('../includes/general.ejs'); %>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "replit",
+  "version": "1.0.0",
+  "description": "A repl.it clone with basic functionality",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mongodb": "^2.2.12",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "passport-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "replit-client": "^0.11.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

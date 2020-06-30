@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 
+            This is the page for the languages we are going to support.
+            
+            I will define the basics, but the rest will have to be styled.
+            
+            The page will change according to language. We will most likely have to do
+            a seperate page for HTML and CSS and Javascript since that will rely on iframes
+        -->
+        <script>var language="<%- language %>"; var raw_lang = "<%- rawlang %>"</script>
+        <%- include('../includes/general.ejs'); %>
+        <script src="../assets/javascript/main.js?1.0.3"></script>
+        
+        <style>
+            #editor {
+                position:absolute;
+                left:14px;
+                top:8.5em;
+                right:50%;
+                bottom:2.9em;
+            }
+            
+            .console-error {
+                color:red;
+            }
+            
+            .console-output {
+                color:white;
+            }
+        </style>
+        
+        <script>
+        //     function clicky(){
+        //         $.post( "/post/run", { language: raw_lang, code: $('#editor').val() }, function(err,data){
+        //             console.log(err,data);
+        //         });
+        //     }
+            
+        //     document.addEventListener('load', function(){
+                
+        //     });
+        </script>
+    </head>
+    <body>
+        <% if(typeof user == 'undefined'){  %><%- include('../includes/nav.ejs'); %><% } else { %><%- include('../includes/nav.ejs', {user:user}); %><% } %>
+        
+        <div id="runsave">
+            <button type="button" class="class">Save <i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+            <!-- onClick="javascript:runCode();" -->
+            <button type="button" class="run" onClick="runCode()">Run <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+        </div>
+        
+        <div id="container"><div id="editor" style="border:1px solid black;">asd</div></div> <!-- This is the editor -->
+       
+       <!-- This is the console -->
+        <div id="console"></div>
+        
+        <iframe id="code" src="javascript:''" style="display:none;"></iframe> <!-- javascript jail  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <link href="../assets/css/main.css?1.0.7" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jq-console/2.7.7/jqconsole.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.0.0/ace.js"></script>
+        
+        <script>
+        $(function () {
+            var jqconsole = $('#console').jqconsole('asd','>');
+            var startPrompt = function () {
+              // Start the prompt with history enabled.
+              jqconsole.Prompt(true, function (input) {
+                // Output input with the class jqconsole-output.
+                jqconsole.Disable();
+                
+                $("#code").attr("src", "javascript:" + input);
+                
+                jqconsole.Enable();
+                
+                // Restart the prompt.
+                startPrompt();
+              });
+            };
+            
+            startPrompt();
+            
+            // Output
+            document.getElementById("code").contentWindow.window.onerror = function(error, url, line) {
+                //jqconsole.Write(error + '\n', 'console-error');
+                //jqconsole.Append('<p>' + error + '</p>').attr('style', 'color:red');
+                jqconsole.Append('<p>' + error + '</p>').attr('style', 'color:red');
+            };
+            
+            var oldLog = console.log;
+            document.getElementById("code").contentWindow.window.console.log = function (message) {
+                //jqconsole.Write(message + '\n', 'console-output');
+                jqconsole.Append('<p>' + message + '</p>').attr('style', 'color:white');
+            };
+            
+            jqconsole.Append('<p>Native browser javascript</p>').attr('style', 'color:green');
+        });
+        
+        
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/lite");
+        editor.getSession().setMode("ace/mode/<%- language %>");
+        
+          //Executes code from the editor    
+          function runCode(){
+            var code = editor.getValue();
+            
+            $('#code').attr('src',"javascript:" + code);
+          }
+        </script>
+        
+        <iframe id="ytplayer" width="0" height="0" src="https://www.youtube.com/embed/lXMskKTw3Bc?autoplay=1&loop=1&playlist=1kr-kVx1qek" frameborder="0" autoplay loop></iframe>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+This is the template for the navigation bar on all pages:
+
+<% if(typeof user == 'undefined'){  %><%- include('../includes/nav.ejs'); %><% } else { %><%- include('../includes/nav.ejs', {user:user}); %><% } %>
+
+This is the template that includes all nessessary libraries (css, javascript) in one line ;)
+<%- include('../includes/general.ejs'); %>

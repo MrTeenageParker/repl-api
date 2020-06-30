@@ -1,0 +1,29 @@
+Wed Nov 23 06:25:06.538 [initandlisten] MongoDB starting : pid=18667 port=27017 dbpath=db/ 64-bit host=directx3dnerd-cis66-proj-4065523
+Wed Nov 23 06:25:06.539 [initandlisten] db version v2.4.9
+Wed Nov 23 06:25:06.539 [initandlisten] git version: nogitversion
+Wed Nov 23 06:25:06.539 [initandlisten] build info: Linux orlo 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 x86_64 BOOST_LIB_VERSION=1_54
+Wed Nov 23 06:25:06.539 [initandlisten] allocator: tcmalloc
+Wed Nov 23 06:25:06.539 [initandlisten] options: { dbpath: "db/", smallfiles: true }
+Wed Nov 23 06:25:06.544 [initandlisten] journal dir=db/journal
+Wed Nov 23 06:25:06.544 [initandlisten] recover : no journal files present, no recovery needed
+Wed Nov 23 06:25:06.712 [websvr] admin web console waiting for connections on port 28017
+Wed Nov 23 06:25:06.712 [initandlisten] waiting for connections on port 27017
+Wed Nov 23 06:25:17.396 [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+Wed Nov 23 06:25:17.396 [signalProcessingThread] now exiting
+Wed Nov 23 06:25:17.396 dbexit: 
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: going to close listening sockets...
+Wed Nov 23 06:25:17.396 [signalProcessingThread] closing listening socket: 9
+Wed Nov 23 06:25:17.396 [signalProcessingThread] closing listening socket: 10
+Wed Nov 23 06:25:17.396 [signalProcessingThread] closing listening socket: 11
+Wed Nov 23 06:25:17.396 [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: going to flush diaglog...
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: going to close sockets...
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: waiting for fs preallocator...
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: lock for final commit...
+Wed Nov 23 06:25:17.396 [signalProcessingThread] shutdown: final commit...
+Wed Nov 23 06:25:17.400 [signalProcessingThread] shutdown: closing all files...
+Wed Nov 23 06:25:17.400 [signalProcessingThread] closeAllFiles() finished
+Wed Nov 23 06:25:17.400 [signalProcessingThread] journalCleanup...
+Wed Nov 23 06:25:17.400 [signalProcessingThread] removeJournalFiles
+Wed Nov 23 06:25:17.408 [signalProcessingThread] shutdown: removing fs lock...
+Wed Nov 23 06:25:17.408 dbexit: really exiting now

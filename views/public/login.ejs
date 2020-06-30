@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{repl} - Login</title>
+    </head>
+    <body>
+        <% if(typeof user == 'undefined'){  %><%- include('../includes/nav.ejs'); %><% } else { %><%- include('../includes/nav.ejs', {user:user}); %><% } %>
+        
+        <!-- Put content inbetween here -->
+        <div id="twittergooglebuttons">
+            <h1>Login to {repl}</h1>
+            
+            <div id="twitterlogin">
+                    <div id="twitterbutton">
+                        <button type="button" 
+                                onclick="javascript:window.location.href='/auth/twitter';" 
+                                id="twitterbutton">
+                            <i class="fa fa-twitter-square fa-5" 
+                                aria-hidden="true">
+                                
+                            </i>
+                                 Twitter Login
+                            </button>
+                    </div>
+            </div>
+            <br />
+            <div id="googlelogin">
+                    <div id="googlelogin">
+                        <div id="googlebutton">
+                            <button type="button" 
+                                    onclick="javascript:window.location.href='/auth/google';" 
+                                    id="googlebutton"> 
+                                <i class="fa fa-google" aria-hidden="true"></i>
+                                 Google Login
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <%- include('../includes/general.ejs'); %>
+    </body>
+</html>

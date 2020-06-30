@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/*Global Styles*/
+nav {
+    position:fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    
+    background-color:lightgrey;
+    width:100%;
+    height:35px;
+    
+    /* Special thanks to many people on StackOverflow (http://stackoverflow.com/a/4407335/4962676) */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    box-shadow: 0px 2px 2px #888888;
+}
+
+/*This removes the links from the stubborn URLS created from html */
+a, u {
+    text-decoration: none;
+}
+
+/* adds underline on the onhover */
+a {
+    text-decoration:none;
+}
+
+a span.title:hover {
+    text-decoration:underline;
+}
+
+a span.title:visited {
+    color: purple;
+}
+
+/* removes dots from unordered lists */
+ul {
+    list-style-type: none;
+}
+
+#foot {
+    background-color:lightgrey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2em;
+    z-index: 999;
+    
+    text-align:center;
+}
+
+.button {
+    /* Google Fonts is bae */
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    cursor:pointer;
+}
+
+.no-highlight {
+    position:relative;
+    top:-30px;
+    left:-35px;
+    
+    cursor:default;
+}
+
+#logo {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:25pt;
+    
+    cursor:pointer;
+}
+
+nav li {
+    position:relative;
+    left:-39px;
+    top:-27px;
+}
+
+nav ul {
+    list-style:none;
+    height:0;
+}
+
+body {
+    background-color: #EDEDED;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+/* Makes our "audio tag" invisible*/
+#ytplayer {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+/* End of globals */
+
+.container {
+    min-height:100%;
+    position:relative;
+}
+
+#content {
+    position:relative;
+    top:15px;
+    text-align:center;
+    padding-bottom:75px;
+}
+
+.summary {
+    position: relative;
+    text-align: left;
+    margin-right: 46em;
+    margin-left: 10px;
+}
+
+#languages {
+    position: relative;
+    top: 4em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em
+}
+
+#popular {
+    text-decoration: none;
+    color: #808080;
+    
+}
+
+#searchBox {
+    position: absolute;
+    top: 12.5em;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#submit {
+    position: absolute;
+    font-size: 19px;
+    top: -1px;
+    right: -50px;
+}
+
+.buttons:hover {
+    background-color: #ACAAAA;
+}
+
+#lang {
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
+
+#vid {
+    position: absolute;
+    right: 10px;
+    top: 14em;
+}
+
+.titles {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:80pt;
+}
+
+#runsave {
+    position:relative;
+    text-align:center;
+    top:2em;
+}
+
+#runsave button {
+    display:inline;
+    border:1px solid grey;
+    border-radius:5px;
+    height:45px;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:15pt;
+}
+
+/* Makes the buttons on the editor page change colors when clicked */
+#runsave button:hover:active {
+    background-color:lightgrey;
+}
+
+/* Makes the buttonbuttons on the editor page change colors when hovered over */
+#runsave button:hover {
+    background-color: #ACAAAA;
+}
+
+#container {
+    height: 93vh;
+    width: 99vw;
+}
+
+/*this is for the login page */
+
+#twittergooglebuttons {
+    width:550px;
+    height:250px;
+    
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    
+    text-align:center;
+}
+
+#twitterbutton {
+    border:none;
+    Background-color:#808080;
+    color:#000000;
+    padding:8px 8px;
+    text-align:center;
+    display:inline-block;
+    font-size:24px;
+    cursor:pointer;
+}
+
+#googlebutton {
+    border:none;
+    Background-color:#808080;
+    color:#000000;
+    padding:8px 8px;
+    text-align:center;
+    display:inline-block;
+    font-size:24px;
+    cursor:pointer;
+}
+#twitterlogin {
+    /*font-family:;*/
+    font-size:22px;
+}
+#googlelogin {
+    /*font-family:;*/
+    font-size:22px;
+}
+p {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+#console {
+    position:absolute;
+    right:14px;
+    top:6.4em;
+    left:50%;
+    bottom:2.2em;
+    background-color:black;
+}
+/* The inner console element. */
+.jqconsole {
+    padding: 10px;
+}
+/* The cursor. */
+.jqconsole-cursor {
+    background-color: gray;
+}
+/* The cursor color when the console looses focus. */
+.jqconsole-blurred .jqconsole-cursor {
+    background-color: #666;
+}
+/* The current prompt text color */
+.jqconsole-prompt {
+    color: #0d0;
+}
+/* The command history */
+.jqconsole-old-prompt {
+    color: #0b0;
+    font-weight: normal;
+}
+/* The text color when in input mode. */
+.jqconsole-input {
+    color: #dd0;
+}
+/* Previously entered input. */
+.jqconsole-old-input {
+    color: #bb0;
+    font-weight: normal;
+}
+/* The text color of the output. */
+.jqconsole-output {
+    color: white;
+}

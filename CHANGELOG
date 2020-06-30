@@ -1,0 +1,42 @@
+   _____ _    _          _   _  _____ ______ _      ____   _____ 
+  / ____| |  | |   /\   | \ | |/ ____|  ____| |    / __ \ / ____|
+ | |    | |__| |  /  \  |  \| | |  __| |__  | |   | |  | | |  __ 
+ | |    |  __  | / /\ \ | . ` | | |_ |  __| | |   | |  | | | |_ |
+ | |____| |  | |/ ____ \| |\  | |__| | |____| |___| |__| | |__| |
+  \_____|_|  |_/_/    \_\_| \_|\_____|______|______\____/ \_____|
+
+When making a successful change (after testing), type these commands in succession:
+
+git add * -f
+git commit -m "Type here what you have changed in detail"
+git push -u origin
+
+This will push to the server automatically.
+
+TODO:
+    - Make pages to link the programming languages to the server
+    - Make login API and make it work
+    - Make using social media accounts an option to login and register
+    - Link source code to do server - (i cant remember what the hell i was typing lol rip)
+    - Do the thing.
+    
+    
+    
+    --------IMPORTANT-----------------------------------------
+    - Make repl.it API work (@professor like crazy plez and remind him when i am offline)
+    DONE  - Fix scrolling on languages/language page
+    - Make login actually work damn it (ALMOST SO CLOSE DAMN IT)
+    - Ignore the minified (file_name.min.ext) that is for me to deal with
+    -----------------------------------------------------------------
+    
+    
+    
+    - Test, test, test, TEEEESSSSSTTTTTTTTT!
+    
+    wow this file hasnt been kept up lol rip
+Things that are done/need testing:
+    - API access has been set up
+    - FINALLY GOT IT TO WORK! Pushing changes automatically updates the server! (nodejs + spawn = <3)
+    - Completed update process, it now is fully automatic. All that needs to be done is pushing to the Github.
+    - I have confirmed that we have everything stated on the rubric for the project.
+    - Output functionality
